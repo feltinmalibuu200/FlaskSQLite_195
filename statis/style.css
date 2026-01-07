@@ -15,10 +15,10 @@ body {
 }
 
 .container {
-    background: #fff;
+    background: #c11818;
     padding: 30px;
     border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(240, 160, 160, 0.945);
     width: 700px;
     max-width: 95%;
 }
@@ -27,7 +27,7 @@ body {
     text-align: center;
     margin-bottom: 25px;
     font-size: 28px;
-    color: #333;
+    color: #d36c8e;
 }
 
 .btn {
@@ -35,8 +35,8 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background: #ccc;
-    color: #333;
+    background: #cd8d8d;
+    color: #ba9393;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -47,7 +47,7 @@ body {
 
 .btn.primary {
     background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
+    color: rgb(130, 181, 225);
 }
 
 .btn.danger {
@@ -60,3 +60,57 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 15px;
 }
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
