@@ -2,7 +2,7 @@ import sqlite3
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
-DB_NAME = "books.db"
+DB_NAME = 'books.db'
 
 def connectdb():
     conn = sqlite3.connect(DB_NAME)
@@ -12,10 +12,10 @@ def connectdb():
 def init_db():
     conn = connectdb()
     conn.execute('''CREATE TABLE IF NOT EXISTS books (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    judul VARCHAR(100) NOT NULL,
-                    penulis VARCHAR(100) NOT NULL
-                    );''')
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        judul VARCHAR(100) NOT NULL,
+        penulis VARCHAR(100) NOT NULL
+    )''')
     conn.commit()
     conn.close()
 
@@ -32,7 +32,10 @@ def add():
         judul = request.form['judul']
         penulis = request.form['penulis']
         conn = connectdb()
-        conn.execute("INSERT INTO books (judul, penulis) VALUES (?, ?)", (judul, penulis))
+        conn.execute(
+            "INSERT INTO books (judul, penulis) VALUES (?, ?)",
+            (judul, penulis)
+        )
         conn.commit()
         conn.close()
         return redirect(url_for('index'))
@@ -41,7 +44,9 @@ def add():
 @app.route('/edit/<int:id>', methods=['GET', 'POST'])
 def edit(id):
     conn = connectdb()
-    book = conn.execute("SELECT * FROM books WHERE id = ?", (id,)).fetchone()
+    book = conn.execute(
+        "SELECT * FROM books WHERE id = ?", (id,)
+    ).fetchone()
 
     if not book:
         return "Buku tidak ditemukan", 404
