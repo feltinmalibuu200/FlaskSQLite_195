@@ -64,9 +64,9 @@ body {
 .card {
   background: rgba(188, 102, 102, 0.95);
   border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(94, 133, 210, 0.653);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(210, 109, 109, 0.651);
   backdrop-filter: blur(10px);
 }
 
@@ -79,7 +79,7 @@ body {
   padding: 20px;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: #ac5e5e;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -98,7 +98,7 @@ body {
 
 .form-group label {
   font-weight: 500;
-  color: #555;
+  color: #9e5656;
 }
 
 .form-group input {
